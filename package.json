@@ -1,17 +1,7 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
-  "description": "This is a boilerplate build with Vite, React 18, TypeScript, Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.",
+  "name": "hyper-ai-live",
+  "description": "Site for browser based ai workflows from hyper-ai",
   "version": "0.1.0",
-  "private": true,
-  "author": {
-    "name": "João Paulo Moraes",
-    "email": "joaopaulomoraes@outlook.com",
-    "url": "https://github.com/joaopaulomoraes"
-  },
-  "bugs": {
-    "url": "https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate/issues",
-    "email": "joaopaulomoraes@outlook.com"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -22,8 +12,13 @@
     "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
+    "hyper-ai": "file:../hyper-ai",
+    "isomorphic-fetch": "^3.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-json-view": "^1.21.3",
+    "react-markdown": "^9.0.1",
+    "react-md": "^5.1.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
