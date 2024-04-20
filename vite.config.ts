@@ -22,5 +22,8 @@ export default defineConfig({
     environment: 'happy-dom',
     setupFiles: '.vitest/setup',
     include: ['**/test.{ts,tsx}']
+  },
+  esbuild: {
+    platform: 'node'
   }
 })
