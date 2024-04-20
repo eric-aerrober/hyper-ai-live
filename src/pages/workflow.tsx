@@ -1,7 +1,6 @@
 import { FieldProgressionsRendered } from "components/fieldProgression";
 import { useEffect, useState } from "react"
 import { WorkflowSaved } from "workflows/workflow";
-import ReactJson from 'react-json-view'
 import Markdown from "react-markdown";
 
 interface WorkflowDisplayedProps {
@@ -76,7 +75,6 @@ export function WorkflowDisplayed ({workflow}: WorkflowDisplayedProps) {
                     <div className="p-2 text-sm">
                         <Markdown>{workflow.render(output)}</Markdown>
                         <div className="mb-[100px]" />
-                        <ReactJson src={output} enableClipboard={false} style={{fontSize: '0.8em', padding: 0}} />
                     </div>
 
                 </>
