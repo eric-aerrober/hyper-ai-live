@@ -25,5 +25,6 @@ export default defineConfig({
   },
   esbuild: {
     platform: 'node'
-  }
+  },
+  base: '/hyper-ai-live/',
 })
