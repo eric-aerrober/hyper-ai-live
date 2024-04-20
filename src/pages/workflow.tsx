@@ -15,6 +15,10 @@ export function WorkflowDisplayed ({workflow}: WorkflowDisplayedProps) {
     const [fieldProgression, setFieldProgression] = useState([] as any[])
 
     useEffect(() => {
+        setFields(workflow.fieldsMap())
+    }, [workflow])
+
+    useEffect(() => {
 
         const listener = (e: KeyboardEvent) => {
             if (e.key === "Enter" && running === false) {
@@ -27,7 +31,7 @@ export function WorkflowDisplayed ({workflow}: WorkflowDisplayedProps) {
         return () => {
             document.removeEventListener("keydown", listener)
         }
-    });
+    }, [workflow]);
 
     const setKey = () => {
         const keyData = window.prompt("Please enter your OpenAI Key")
@@ -36,7 +40,6 @@ export function WorkflowDisplayed ({workflow}: WorkflowDisplayedProps) {
 
     const onSubmit = async () => {
         setFieldProgression([])
-        setFields(workflow.fieldsMap())
         setRunning(true)
         const consumeEvent = (event: any) => setFieldProgression(current => [...current, event])
         const data = await workflow.invoke(fields, consumeEvent)

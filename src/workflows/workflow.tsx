@@ -21,7 +21,7 @@ export class WorkflowSaved<T> {
 
     public fieldsMap () {
         return this.fields.reduce((acc, field) => {
-            acc[field] = "i want to make a competitor to link tree"
+            acc[field] = ""
             return acc
         }, {} as any)
     }
